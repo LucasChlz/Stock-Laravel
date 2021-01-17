@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
     public function Dashboard()
     {
-        if (Auth::check() === true) {
+        if (Auth::check()) {
             return view('admin.dashboard');
         }
 
@@ -21,6 +21,26 @@ class DashboardController extends Controller
     public function LoginPage()
     {
         return view('login');
+    }
+
+    public function LoginMake(Request $request)
+    {
+        $UserInfo = [
+            'email' => $request->email,
+            'password' => $request->password
+        ];
+
+        if (Auth::attempt($UserInfo)) {
+            return redirect()->route('admin.dashboard');
+        } else {
+            return redirect()->route('login.page')->with('error', 'error');
+        }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login.page');
     }
 
     public function RegisterPage()
@@ -38,4 +58,5 @@ class DashboardController extends Controller
 
         return redirect()->route('register.page')->with('success', 'User successfully registed');
     }
+    
 }
