@@ -20,8 +20,10 @@
         <div class="container">
             <div class="sec-log">
                 <div class="box-form">
+                    {{\Session::get('error')}}
+                    {{\Session::get('success')}}
                     <h2>Signin now!</h2>
-                    <form action="" method="POST">
+                    <form action="{{ route('register.make') }}" method="POST">
                         @csrf
                         <label for="">Name</label>
                             <input type="text" name="name">

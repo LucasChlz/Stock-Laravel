@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,8 +23,19 @@ class DashboardController extends Controller
         return view('login');
     }
 
-    public function StorePage()
+    public function RegisterPage()
     {
         return view('store');
+    }
+
+    public function RegisterMake(Request $request)
+    {
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password'=> Hash::make($request->password)
+        ]);
+
+        return redirect()->route('register.page')->with('success', 'User successfully registed');
     }
 }
