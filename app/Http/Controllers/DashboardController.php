@@ -13,11 +13,16 @@ class DashboardController extends Controller
             return view('admin.dashboard');
         }
 
-        return redirect()->route('loginPage');
+        return redirect()->route('login.page');
     }
 
     public function LoginPage()
     {
         return view('login');
+    }
+
+    public function StorePage()
+    {
+        return view('store');
     }
 }
