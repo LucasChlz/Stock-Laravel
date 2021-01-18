@@ -33,7 +33,7 @@ class DashboardController extends Controller
         if (Auth::attempt($UserInfo)) {
             return redirect()->route('admin.dashboard');
         } else {
-            return redirect()->route('login.page')->with('error', 'error');
+            return redirect()->route('login.page')->with('error', 'Invalid fields');
         }
     }
 

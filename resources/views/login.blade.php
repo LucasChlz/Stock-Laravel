@@ -9,7 +9,7 @@
         <div class="container">
             <img src="{{ asset('images/boxLogo1.png') }}" alt="">
             <div class="btn">
-                <a href="#">Log In</a>
+                <a href="{{ route('register.page') }}">Sign In</a>
             </div><!--btn-->
         </div><!--container-->
     </header>
@@ -26,9 +26,9 @@
                     <form action="{{ route('login.make') }}" method="POST">
                         @csrf
                         <label for="">E-mail</label>
-                            <input type="text" name="email">
+                            <input type="email" name="email">
                         <label for="">Password</label>
-                            <input type="text" name="password">
+                            <input type="password" name="password">
                         <button type="submit">Log In</button>
                     </form>
                 </div><!--box-form-->

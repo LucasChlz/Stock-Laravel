@@ -9,7 +9,7 @@
         <div class="container">
             <img src="{{ asset('images/boxLogo1.png') }}" alt="">
             <div class="btn">
-                <a href="#">Log In</a>
+                <a href="{{ route('login.page') }}">Log In</a>
             </div><!--btn-->
         </div><!--container-->
     </header>
@@ -28,9 +28,9 @@
                         <label for="">Name</label>
                             <input type="text" name="name">
                         <label for="">E-mail</label>
-                            <input type="text" name="email">
+                            <input type="email" name="email">
                         <label for="">Password</label>
-                            <input type="text" name="password">
+                            <input type="password" name="password">
                         <button type="submit">Sign In</button>
                     </form>
                 </div><!--box-form-->
