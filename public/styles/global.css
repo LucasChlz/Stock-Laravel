@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, button, input {
+    font-family: 'Roboto Mono', monospace;
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+}
+
+.clear {
+    clear: both;
+}
+
+
+:root {
+    --primary-color: #d43221;
+    --text-color-blue: #1a98e0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* header {
+    background-color: #151516;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.btn {
+    width: 130px;
+    height: 50px;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 30px;
+    background: #d43221;
+}
+
+.btn > a {
+    text-decoration: none;
+    font-size: 23px;
+    color: white;
+}
+
+
+.sec-content {
+    height: 100%;
+    background: #151516;
+}
+
+
+.sec-log {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.bg-wave {
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/background-square.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 150px;
+    z-index: 1;
+}
+
+.box-form {
+    height: auto;
+    padding: 30px 30px;
+    width: 100%;    
+    height: auto;
+    max-width: 400px;
+    position: relative;
+    border-radius: 30px;
+    top: 30px;
+    background: white;
+    margin: 0 auto;
+}
+
+.box-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-top: 20px;
+    display: block;
+    font-size: 20px;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=password] {
+    width: 100%;
+    height: 30px;
+    padding-left: 2%;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=password]:focus {
+    outline: none;
+}
+
+form button {
+    margin-top: 20px;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: var(--primary-color);
+} */

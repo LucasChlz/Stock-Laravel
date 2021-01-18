@@ -1,41 +1,56 @@
 @extends('layouts.Template')
 
+@section('title')
+    Signin-Stock
+@endsection
+
+
 @section('css')
+    <link rel="stylesheet" href="{{ asset('styles/global.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/login.css') }}">
 @endsection
 
-@section('navbar')
-    <header>
-        <div class="container">
-            <img src="{{ asset('images/boxLogo1.png') }}" alt="">
-            <div class="btn">
-                <a href="{{ route('login.page') }}">Log In</a>
-            </div><!--btn-->
-        </div><!--container-->
-    </header>
-@endsection
-
 @section('content')
-    <section class="sec-content">
+<div class="sec-cont">
+    <section class="caller">
+        <div class="overlay">
+            <div class="container">
+                <div class="text-caller">
+                    <h1>WELCOME TO <br>STOCKETZ</h1>
+                    <p>keep your products organized with <colorTxt>Stocketz<colorTxt></p>
+                    <p></p>
+                </div><!--text-caller-->
+            </div><!--container-->
+        </div><!--overlay-->
+    </section><!--caller-->
+    <div class="clear"></div>
+    </div>
+    <section class="login">
         <div class="container">
-            <div class="sec-log">
-                <div class="box-form">
-                    {{\Session::get('error')}}
-                    {{\Session::get('success')}}
-                    <h2>Signin now!</h2>
-                    <form action="{{ route('register.make') }}" method="POST">
-                        @csrf
+            <div class="text-form">
+                <h1>Sign Up</h1>
+                <p>already have an account ? <colorTxt><a href="{{ route('login.page') }}">Login here!</a></colorTxt></p>
+                <form action="{{ route('register.make') }}" method="POST">
+                    @csrf
+                    <div class="input-sec">
                         <label for="">Name</label>
-                            <input type="text" name="name">
+                        <input type="text" name="name">
+                    </div><!--input-sec-->
+
+                    <div class="input-sec">
                         <label for="">E-mail</label>
-                            <input type="email" name="email">
+                        <input type="email" name="email">
+                    </div><!--input-sec-->
+
+                    <div class="input-sec">
                         <label for="">Password</label>
-                            <input type="password" name="password">
-                        <button type="submit">Sign In</button>
-                    </form>
-                </div><!--box-form-->
-            </div><!--sec-log-->
+                        <input type="password" name="password">
+                    </div><!--input-sec-->
+
+                    <button type="submit">Login</button>
+                </form>
+            </div><!--text-form-->
         </div><!--container-->
-        <div class="bg-wave"></div><!--bg-wave-->
-    </section>
+        <div class="clear"></div>
+    </section><!--login-->
 @endsection

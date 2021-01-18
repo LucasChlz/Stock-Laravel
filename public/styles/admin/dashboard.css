@@ -1,0 +1,38 @@
+header {
+    width: 100%;
+    height: auto;
+    padding: 10px 10px;
+    background-color: #151516;
+}
+
+header img {
+    margin: 0 auto;
+}
+
+.side-btn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 4;
+    top: 10;
+    left: 20px;
+    font-size: 40px;
+    margin-top: 10px;
+    color: white;
+}
+
+.sideMenu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: red;
+    height: 100vh;
+    transform: translateX(-300px);
+    transition: 1s;
+}
+
+.animationSide {
+    transform: translateX(0);
+}

@@ -12,5 +12,6 @@
 <body>
     @yield('navbar')
     @yield('content')
+    @yield('js')
 </body>
 </html>

@@ -1,9 +1,16 @@
 @extends('layouts.Template')
 
-@section('navbar')
-    <div class="container">
-        <header>
+@section('title')
+    Welcome {{ $userInfo->name }}  
+@endsection
 
-        </header>
-    </div><!--container-->
+@section('css')
+    <link rel="stylesheet" href="{{ asset('styles/admin/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/global.css') }}">
+@endsection
+
+
+@section('js')
+<script src="https://kit.fontawesome.com/f3bfbc9f38.js" crossorigin="anonymous"></script>
+{{-- <script src="{{ asset('js/sideMenu.js') }}"></script> --}}
 @endsection
