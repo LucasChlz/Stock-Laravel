@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('amount');
-            $table->integer('price');
+            $table->decimal('price');
             $table->string('fileName');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
