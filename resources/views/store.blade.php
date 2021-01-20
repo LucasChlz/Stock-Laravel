@@ -28,6 +28,8 @@
     <section class="login">
         <div class="container">
             <div class="text-form">
+                {{\Session::get('error')}}
+                {{\Session::get('success')}}
                 <h1>Sign Up</h1>
                 <p>already have an account ? <colorTxt><a href="{{ route('login.page') }}">Login here!</a></colorTxt></p>
                 <form action="{{ route('register.make') }}" method="POST">

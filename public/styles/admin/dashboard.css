@@ -1,38 +1,110 @@
-header {
-    width: 100%;
-    height: auto;
-    padding: 10px 10px;
-    background-color: #151516;
-}
-
-header img {
-    margin: 0 auto;
-}
-
 .side-btn {
     cursor: pointer;
     position: absolute;
-    z-index: 4;
-    top: 10;
+    top: 0;
     left: 20px;
     font-size: 40px;
     margin-top: 10px;
-    color: white;
+    color: black;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #3a748b;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #34929e;
+}
+::-webkit-scrollbar-thumb {
+    background: #0c0c0c;
+}
+
+.re-side {
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+    font-size: 50px;
+    margin-left: 10px;
+    color: black;
 }
 
 .sideMenu {
     position: fixed;
-    z-index: 3;
     top: 0;
     left: 0;
-    bottom: 0;
-    width: 300px;
-    background: red;
-    height: 100vh;
-    transform: translateX(-300px);
-    transition: 1s;
+    z-index: 1;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    background: #182027;
+    transition: 1s width    ;
+}
+
+.container-content {
+    width: 100%;
+    background: rgb(218, 215, 187);
+    height: 100%;
+    transition: 1s margin-left;
+}
+
+.user-info {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    background: rgb(23, 36, 41);
+    height: auto;
+    word-wrap: break-word;
+    padding: 30px;
+}
+
+.user-info span {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.user-info p {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.container-icons {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-single {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+}
+
+.icon-single:hover {
+    transition: 0.5s;
+    background: rgb(29, 49, 56);
+}
+
+.icon-single i {
+    font-size: 30px;
+    color: white;
+}
+
+.icon-single span {
+    position: relative;
+    top: -4px;
+    font-size: 20px;
+    color: white;
+}
+
+.container-icons a {
+    text-decoration: none;
+}
+
+.active {
+    background: rgb(29, 49, 56);
 }
 
 .animationSide {
-    transform: translateX(0);
+    width: 30%;
 }
