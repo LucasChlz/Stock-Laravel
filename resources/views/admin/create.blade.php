@@ -48,7 +48,7 @@
                 <h2>Create new Product</h2>
                 {{\Session::get('error')}}
                 {{\Session::get('success')}}
-                <form action="{{ route('register.make') }}" method="POST">
+                <form action="{{ route('admin.create.make') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="input-sec">
                         <label for="">Name</label>

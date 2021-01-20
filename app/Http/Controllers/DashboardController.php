@@ -27,5 +27,10 @@ class DashboardController extends Controller
             'userInfo' => Auth::user()
         ]);
     }
+
+    public function createMake(Request $request)
+    {
+        
+    }
     
 }
