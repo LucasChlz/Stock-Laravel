@@ -23,10 +23,12 @@
     cursor: pointer;
     opacity: 0;
     display: none;
+    width: 130px;
     font-size: 50px;
     margin-left: 10px;
     color: black;
 }
+
 
 .sideMenu {
     position: fixed;
@@ -42,8 +44,9 @@
 
 .container-content {
     width: 100%;
+    height: auto;
     background: rgb(218, 215, 187);
-    height: 100%;
+    min-height: 100%;
     transition: 1s margin-left;
 }
 

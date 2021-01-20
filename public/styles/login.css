@@ -95,7 +95,9 @@ colorTxt > a {
 
 .text-form input[type=email],
 .text-form input[type=text],
-.text-form input[type=password] {
+.text-form input[type=password],
+.text-form input[type=number],
+.text-form input[type=file] {
     width: 100%;
     font-size: 15px;
     padding-left: 2%;
@@ -106,7 +108,9 @@ colorTxt > a {
 
 .text-form input[type=email],
 .text-form input[type=text],
-.text-form input[type=password]:focus {
+.text-form input[type=password],
+.text-form input[type=number],
+.text-form input[type=file]:focus {
     outline: 0;
 }
 

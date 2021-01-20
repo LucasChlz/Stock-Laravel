@@ -24,7 +24,7 @@
                     <span>Products</span>
                 </div></a>                
 
-                <a href=""><div class="icon-single">
+                <a href="{{ route('admin.create') }}"><div class="icon-single">
                     <i class="fas fa-archive"></i>
                     <span>Create Products</span>
                 </div></a>

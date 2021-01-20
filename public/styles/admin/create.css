@@ -1,0 +1,10 @@
+.container-call {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 50px;
+}
+
+.text-form h2 {
+    font-size: 40px;
+    text-align: center;
+}

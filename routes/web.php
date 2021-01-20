@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'Dashboard'])->name('admin.dashboard');
+Route::get('/create', [DashboardController::class, 'CreatePage'])->name('admin.create');
 
 Route::get('/login', [AuthController::class, 'LoginPage'])->name('login.page');
 Route::post('/login/make', [AuthController::class, 'LoginMake'])->name('login.make');

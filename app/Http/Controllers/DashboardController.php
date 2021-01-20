@@ -20,5 +20,12 @@ class DashboardController extends Controller
             'userInfo' => Auth::user()
         ]);
     }
+
+    public function createPage()
+    {
+        return view('admin.create', [
+            'userInfo' => Auth::user()
+        ]);
+    }
     
 }

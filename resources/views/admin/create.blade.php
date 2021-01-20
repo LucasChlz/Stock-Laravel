@@ -6,6 +6,8 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('styles/admin/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/admin/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/login.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/global.css') }}">
 @endsection
 
@@ -41,9 +43,36 @@
     <section id="content" class="container-content">
         <span class="side-btn" id="menuBtn" ><i class="fas fa-bars"></i></span>
         <span id="closeBtn" class="re-side"><i class="fas fa-caret-square-left"></i></span>
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa facilis quo similique quis eaque accusantium nobis nemo labore omnis repellat nulla assumenda, corrupti expedita quidem cum, rem impedit reprehenderit doloremque!</p>
-            
+        <div class="container-call">
+            <div class="text-form">
+                <h2>Create new Product</h2>
+                {{\Session::get('error')}}
+                {{\Session::get('success')}}
+                <form action="{{ route('register.make') }}" method="POST">
+                    @csrf
+                    <div class="input-sec">
+                        <label for="">Name</label>
+                        <input type="text" name="name">
+                    </div><!--input-sec-->
+
+                    <div class="input-sec">
+                        <label for="">Amount</label>
+                        <input type="number" min="0" name="amount">
+                    </div><!--input-sec-->
+
+                    <div class="input-sec">
+                        <label for="">Price</label>
+                        <input type="text" name="price">
+                    </div><!--input-sec-->
+
+                    <div class="input-sec">
+                        <label for="">Image</label>
+                        <input type="file" name="image">
+                    </div><!--input-sec-->
+
+                    <button type="submit">Login</button>
+                </form>
+            </div><!--text-form-->
         </div>
     </section><!--container-content-->
 @endsection
