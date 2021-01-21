@@ -19,7 +19,7 @@
             </div><!--user-info-->
 
             <div class="container-icons">
-                <a href=""><div class="icon-single">
+                <a href="{{ route('admin.dashboard') }}"><div class="icon-single active">
                     <i class="fas fa-boxes"></i>
                     <span>Products</span>
                 </div></a>                
@@ -41,10 +41,29 @@
     <section id="content" class="container-content">
         <span class="side-btn" id="menuBtn" ><i class="fas fa-bars"></i></span>
         <span id="closeBtn" class="re-side"><i class="fas fa-caret-square-left"></i></span>
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa facilis quo similique quis eaque accusantium nobis nemo labore omnis repellat nulla assumenda, corrupti expedita quidem cum, rem impedit reprehenderit doloremque!</p>
+
+        <div class="container-products">
             
-        </div>
+            @foreach ($Products as $product)    
+                <div class="single-product   @if ($Products->count() === 2)
+                    flex-1
+                @endif">
+                    <h1>{{ $product->name }}</h1>
+                    <div class="image-product">
+                        <img src="{{ asset("storage/products/{$product->fileName}") }}" alt="">
+                    </div><!--img-->
+
+                    <div class="info-product">
+                        <p>Price: {{ $product->price}}</p>
+                        <p>Amount: {{ $product->price}}</p>
+                        <p>Created At: {{ $product->created_at }}</p>
+                   </div><!--info-product-->
+
+                </div><!--single--product-->
+            @endforeach
+            
+        </div><!--container-products-->
+
     </section><!--container-content-->
 @endsection
 

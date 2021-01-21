@@ -21,7 +21,7 @@
             </div><!--user-info-->
 
             <div class="container-icons">
-                <a href=""><div class="icon-single">
+                <a href="{{ route('admin.dashboard') }}"><div class="icon-single">
                     <i class="fas fa-boxes"></i>
                     <span>Products</span>
                 </div></a>                

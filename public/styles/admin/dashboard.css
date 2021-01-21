@@ -1,10 +1,8 @@
 .side-btn {
+    width: 130px;
     cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 20px;
     font-size: 40px;
-    margin-top: 10px;
+    padding: 5px 10px;
     color: black;
 }
 
@@ -110,4 +108,54 @@
 
 .animationSide {
     width: 30%;
+}
+
+.container-products {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.single-product {
+    width: 32%;
+    margin: 5px;
+    height: auto;
+    background-color: #182027;
+}
+
+.single-product h1 {
+    padding: 10px 10px;
+    text-align: center;
+    color: white;
+}
+
+.image-product img {
+    border: 4px solid #0c0c0c;
+    width: 100%;
+    height: 100%;
+}
+
+.info-product {
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.info-product p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 890px) {
+    .single-product {
+        width: 46%;
+        flex: none;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
 }

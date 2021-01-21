@@ -17,8 +17,13 @@ class DashboardController extends Controller
 
     public function Dashboard()
     {
+        $userId = Auth::user()->id;
+
+        $Products = Product::where('user_id', '=', $userId)->get();
+
         return view('admin.dashboard', [
-            'userInfo' => Auth::user()
+            'userInfo' => Auth::user(),
+            'Products' => $Products
         ]);
     }
 
