@@ -55,7 +55,14 @@
 
                     <div class="info-product">
                         <p>Price: {{ $product->price}}</p>
-                        <p>Amount: {{ $product->amount}}</p>
+                        <form action="{{ route('admin.amount.update') }}" method="post">
+                        @csrf
+                            <p class="amountPut">Amount
+                                <input type="number" min="0" name="amount" value="{{ $product->amount}}">
+                                <input type="hidden" name="id" value="{{ $product->id }}">
+                                <button>Update</button>
+                            </p>
+                        </form>
                         <p>Created At: {{ $product->created_at }}</p>
                    </div><!--info-product-->
 

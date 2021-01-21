@@ -151,6 +151,23 @@
     margin-bottom: 10px;
 }
 
+.amountPut input {
+    border: none;
+    color: white;
+    font-size: 15px;
+    width: 50px;
+    background: none;
+    margin-right: 3px;
+}
+
+.amountPut button {
+    border: none;
+    background: #178329;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+}
+
 @media (max-width: 890px) {
     .single-product {
         width: 46%;

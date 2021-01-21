@@ -60,5 +60,13 @@ class DashboardController extends Controller
         return redirect()->route('admin.create')->with('success', 'Product sucessfully created');
 
     }
+
+    public function updateAmount(Request $request) {
+        Product::where('id', '=', $request->id)->update([
+            'amount' => $request->amount
+        ]);
+        
+        return redirect()->route('admin.dashboard');
+    }
     
 }

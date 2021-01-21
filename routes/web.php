@@ -8,6 +8,8 @@ Route::get('/', [DashboardController::class, 'Dashboard'])->name('admin.dashboar
 Route::get('/create', [DashboardController::class, 'CreatePage'])->name('admin.create');
 Route::post('/create/make', [DashboardController::class, 'CreateMake'])->name('admin.create.make')->middleware('ProductAuth');
 
+Route::post('/update', [DashboardController::class, 'updateAmount'])->name('admin.amount.update');
+
 Route::get('/login', [AuthController::class, 'LoginPage'])->name('login.page');
 Route::post('/login/make', [AuthController::class, 'LoginMake'])->name('login.make');
 Route::get('/logout', [AuthController::class, 'Logout'])->name('logout');
