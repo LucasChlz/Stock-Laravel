@@ -57,6 +57,7 @@
                         <p>Price: {{ $product->price}}</p>
                         <form action="{{ route('admin.amount.update') }}" method="post">
                         @csrf
+                        @method('put')
                             <p class="amountPut">Amount
                                 <input type="number" min="0" name="amount" value="{{ $product->amount}}">
                                 <input type="hidden" name="id" value="{{ $product->id }}">
