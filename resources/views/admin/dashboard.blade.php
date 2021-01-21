@@ -55,7 +55,7 @@
 
                     <div class="info-product">
                         <p>Price: {{ $product->price}}</p>
-                        <p>Amount: {{ $product->price}}</p>
+                        <p>Amount: {{ $product->amount}}</p>
                         <p>Created At: {{ $product->created_at }}</p>
                    </div><!--info-product-->
 

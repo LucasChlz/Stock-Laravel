@@ -62,7 +62,7 @@
 
                     <div class="input-sec">
                         <label for="">Price</label>
-                        <input type="text" name="price">
+                        <input type="number" name="price">
                     </div><!--input-sec-->
 
                     <div class="input-sec">

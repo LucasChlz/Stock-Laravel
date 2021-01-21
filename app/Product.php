@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use NumberFormatter;
 
 class Product extends Model
 {
@@ -15,4 +16,16 @@ class Product extends Model
     protected $hidden = [
         'user_id'
     ];
+
+    public function getPriceAttribute()
+    {
+        $price = $this->attributes['price'];
+
+        $formatter = new NumberFormatter('en_US', NumberFormatter::CURRENCY);
+        $values = $formatter->formatCurrency($price, 'USD');
+
+        return $values;
+    }
+
+ 
 }
