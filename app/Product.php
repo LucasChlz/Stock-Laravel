@@ -27,5 +27,12 @@ class Product extends Model
         return $values;
     }
 
+    public function getCreatedAtAttribute()
+    {
+        $createdAt = $this->attributes['created_at'];
+
+        return \Carbon\Carbon::parse($createdAt)->format('m/d/Y');
+    }
+
  
 }
