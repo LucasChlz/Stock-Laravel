@@ -62,7 +62,8 @@ class DashboardController extends Controller
     }
 
     public function updateAmount(Request $request) {
-        Product::where('id', '=', $request->id)->update([
+        $userId = Auth::user()->id;
+        Product::where('id', '=', $request->id)->where('user_id', '=', $userId)->update([
             'amount' => $request->amount
         ]);
         
