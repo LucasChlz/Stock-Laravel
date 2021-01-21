@@ -124,6 +124,7 @@
 
 .single-product {
     width: 32%;
+    position: relative;
     margin: 5px;
     height: auto;
     background-color: #182027;
@@ -166,6 +167,17 @@
     cursor: pointer;
     color: white;
     padding: 5px 10px;
+}
+
+.deleteBtn {
+    border: 0;
+    background: none;
+    color: rgb(168, 26, 26);
+    font-size: 40px;
+    position: absolute;
+    top: -25px;
+    cursor: pointer;
+    right: -10px;
 }
 
 @media (max-width: 890px) {

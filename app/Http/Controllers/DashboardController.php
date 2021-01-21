@@ -68,5 +68,12 @@ class DashboardController extends Controller
         
         return redirect()->route('admin.dashboard');
     }
+
+    public function deleteProduct(Request $request) {
+        $userId = Auth::user()->id;
+        Product::where('user_id', '=', $userId)->where('id', '=', $request->id)->delete();
+
+        return redirect()->route('admin.dashboard');
+    }
     
 }

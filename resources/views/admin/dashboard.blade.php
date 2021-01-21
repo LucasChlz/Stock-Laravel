@@ -48,6 +48,11 @@
                 <div class="single-product   @if ($Products->count() === 2)
                     flex-1
                 @endif">
+                    <form action="{{ route('admin.delete', ['id' => $product->id]) }}" method="POST">
+                        @csrf
+                        @method('delete');
+                        <button class="deleteBtn" type="submit"><i class="fas fa-times"></i></button>
+                    </form>
                     <h1>{{ $product->name }}</h1>
                     <div class="image-product">
                         <img src="{{ asset("storage/products/{$product->fileName}") }}" alt="">
@@ -57,7 +62,7 @@
                         <p>Price: {{ $product->price}}</p>
                         <form action="{{ route('admin.amount.update') }}" method="post">
                         @csrf
-                        @method('put')
+                        @method('patch')
                             <p class="amountPut">Amount
                                 <input type="number" min="0" name="amount" value="{{ $product->amount}}">
                                 <input type="hidden" name="id" value="{{ $product->id }}">
