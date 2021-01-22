@@ -6,6 +6,7 @@ use App\Product;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -72,9 +73,16 @@ class DashboardController extends Controller
 
     public function deleteProduct(Request $request) {
         $userId = Auth::user()->id;
-        Product::where('user_id', '=', $userId)->where('id', '=', $request->id)->delete();
+
+        $getProduct = Product::where('user_id', '=', $userId)->where('id', '=', $request->id);
+
+        $nameFile = $getProduct->get()->first()->fileName;
+        Storage::delete(['/products/'.$nameFile]);
+
+        $getProduct->delete();
 
         return redirect()->route('admin.dashboard');
+                
     }
     
 }
