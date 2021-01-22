@@ -50,10 +50,10 @@
                 @endif">
                     <form action="{{ route('admin.delete', ['id' => $product->id]) }}" method="POST">
                         @csrf
-                        @method('delete');
+                        @method('delete')
                         <button class="deleteBtn" type="submit"><i class="fas fa-times"></i></button>
                     </form>
-                    <h1>{{ $product->name }}</h1>
+                    <h1><a class="edit-btn" href="{{ route('admin.product.update', ['id' => $product->id]) }}"><i class="fas fa-edit"></i></a> {{ $product->name }}</h1>
                     <div class="image-product">
                         <img src="{{ asset("storage/products/{$product->fileName}") }}" alt="">
                     </div><!--img-->

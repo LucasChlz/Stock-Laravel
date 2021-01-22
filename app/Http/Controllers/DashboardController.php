@@ -81,8 +81,25 @@ class DashboardController extends Controller
 
         $getProduct->delete();
 
-        return redirect()->route('admin.dashboard');
-                
+        return redirect()->route('admin.dashboard'); 
+    }
+
+    public function updateProduct (Request $request) {
+        $userId = Auth::user()->id;
+
+        $searchProduct = Product::where('user_id', '=', $userId)->where('id', '=', $request->id);
+        if ($searchProduct->count() === 0) {
+            return redirect()->route('admin.dashboard'); 
+        }
+
+        $position = strpos($searchProduct->get()->first()->price, '$');
+        $price = substr($searchProduct->get()->first()->price, $position+1);
+
+        return view('admin.edit', [
+            'userInfo' => Auth::user(),
+            'productInfo' => $searchProduct->get()->first(),
+            'priceProduct' => $price
+        ]);
     }
     
 }

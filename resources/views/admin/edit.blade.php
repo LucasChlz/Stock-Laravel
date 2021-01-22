@@ -52,25 +52,20 @@
                     @csrf
                     <div class="input-sec">
                         <label for="">Name</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" value="{{ $productInfo->name }}">
                     </div><!--input-sec-->
 
                     <div class="input-sec">
                         <label for="">Amount</label>
-                        <input type="number" min="0" name="amount">
+                        <input type="number" min="0" name="amount" value="{{ $productInfo->amount }}">
                     </div><!--input-sec-->
 
                     <div class="input-sec">
                         <label for="">Price</label>
-                        <input type="number" name="price">
+                        <input type="number" name="price" value="{{ $priceProduct }}">
                     </div><!--input-sec-->
 
-                    <div class="input-sec">
-                        <label for="">Image</label>
-                        <input type="file" name="image">
-                    </div><!--input-sec-->
-
-                    <button type="submit">Create</button>
+                    <button type="submit">Update</button>
                 </form>
             </div><!--text-form-->
         </div>

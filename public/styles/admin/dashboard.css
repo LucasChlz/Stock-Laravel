@@ -180,6 +180,12 @@
     right: -10px;
 }
 
+.edit-btn{
+    text-decoration: none;
+    color: #34929e;
+    font-size: 30px;
+}
+
 @media (max-width: 890px) {
     .single-product {
         width: 46%;
