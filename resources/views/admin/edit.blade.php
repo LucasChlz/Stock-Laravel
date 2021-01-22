@@ -63,7 +63,7 @@
 
                     <div class="input-sec">
                         <label for="">Price</label>
-                        <input type="number" name="price" max="90000000.00" value="{{ $priceProduct }}">
+                        <input type="number" name="price" min="0" step="0.01" max="90000000.00" value="{{ $priceProduct }}">
                     </div><!--input-sec-->
 
                     <div class="input-sec">

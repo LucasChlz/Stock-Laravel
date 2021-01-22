@@ -62,7 +62,7 @@
 
                     <div class="input-sec">
                         <label for="">Price</label>
-                        <input type="number" max="90000000.00" name="price">
+                        <input type="number" min="0" max="90000000.00" step="0.01" name="price">
                     </div><!--input-sec-->
 
                     <div class="input-sec">
