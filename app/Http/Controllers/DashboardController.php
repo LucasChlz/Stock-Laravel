@@ -104,9 +104,35 @@ class DashboardController extends Controller
     }
 
     public function updateProductMake(Request $request) {
+
         $userId = Auth::user()->id;
 
-        Product::where('id', '=', $request->id)->where('user_id', '=', $userId)->update([
+        $getProduct = Product::where('id', '=', $request->id)->where('user_id', '=', $userId);        
+
+        if ($request->hasFile('image')) {
+            $this->middleware('UpdateProduct');
+
+            $currentImage = $getProduct->get()->first()->fileName;
+            $uniqName = uniqid(date('HisYmd'));
+            $type = $request->image->extension();
+
+            $fileName = "{$uniqName}.{$type}";
+
+            $uploadImage = $request->image->storeAs('products', $fileName);
+
+            if (!$uploadImage) {
+                return redirect()->route('admin.update.product')->with('error', 'Failed to upload');
+            }
+
+            Storage::delete(['/products/'.$currentImage]);
+
+            $getProduct->update([
+                'fileName' => $fileName
+            ]);
+
+        }
+
+        $getProduct->update([
             'name' => $request->name,
             'price' => $request->price,
             'amount' => $request->amount

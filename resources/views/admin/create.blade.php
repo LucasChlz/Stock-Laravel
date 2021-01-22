@@ -44,7 +44,7 @@
         <span class="side-btn" id="menuBtn" ><i class="fas fa-bars"></i></span>
         <span id="closeBtn" class="re-side"><i class="fas fa-caret-square-left"></i></span>
         <div class="container-call">
-            <div class="text-form">
+            <div style="padding: 20px 20px" class="text-form">
                 <h2>Create new Product</h2>
                 {{\Session::get('error')}}
                 {{\Session::get('success')}}

@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'AuthUser' => \App\Http\Middleware\AuthUser::class,
         'authLogged' => \App\Http\Middleware\AuthLogged::class,
         'ProductAuth' => \App\Http\Middleware\ProductAuth::class,
+        'UpdateProduct' => \App\Http\Middleware\UpdateProduct::class,
     ];
 }

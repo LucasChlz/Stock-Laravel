@@ -44,7 +44,7 @@
         <span class="side-btn" id="menuBtn" ><i class="fas fa-bars"></i></span>
         <span id="closeBtn" class="re-side"><i class="fas fa-caret-square-left"></i></span>
         <div class="container-call">
-            <div class="text-form">
+            <div style="padding: 20px 20px" class="text-form">
                 <h2>Edit your product</h2>
                 {{\Session::get('error')}}
                 {{\Session::get('success')}}
@@ -65,6 +65,12 @@
                         <label for="">Price</label>
                         <input type="number" name="price" max="90000000.00" value="{{ $priceProduct }}">
                     </div><!--input-sec-->
+
+                    <div class="input-sec">
+                        <label for="">Image</label>
+                        <input type="file" name="image">
+                    </div><!--input-sec-->
+
 
                     <button type="submit">Update</button>
                 </form>
