@@ -45,11 +45,12 @@
         <span id="closeBtn" class="re-side"><i class="fas fa-caret-square-left"></i></span>
         <div class="container-call">
             <div class="text-form">
-                <h2>Create new Product</h2>
+                <h2>Edit your product</h2>
                 {{\Session::get('error')}}
                 {{\Session::get('success')}}
-                <form action="{{ route('admin.create.make') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.product.update.make', ['id' => $productInfo->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('put')
                     <div class="input-sec">
                         <label for="">Name</label>
                         <input type="text" name="name" value="{{ $productInfo->name }}">
@@ -62,7 +63,7 @@
 
                     <div class="input-sec">
                         <label for="">Price</label>
-                        <input type="number" name="price" value="{{ $priceProduct }}">
+                        <input type="number" name="price" max="90000000.00" value="{{ $priceProduct }}">
                     </div><!--input-sec-->
 
                     <button type="submit">Update</button>

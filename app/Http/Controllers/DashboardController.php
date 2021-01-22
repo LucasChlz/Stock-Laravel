@@ -94,12 +94,25 @@ class DashboardController extends Controller
 
         $position = strpos($searchProduct->get()->first()->price, '$');
         $price = substr($searchProduct->get()->first()->price, $position+1);
-
+        $price = str_replace(',', "" ,$price);
+       
         return view('admin.edit', [
             'userInfo' => Auth::user(),
             'productInfo' => $searchProduct->get()->first(),
             'priceProduct' => $price
         ]);
+    }
+
+    public function updateProductMake(Request $request) {
+        $userId = Auth::user()->id;
+
+        Product::where('id', '=', $request->id)->where('user_id', '=', $userId)->update([
+            'name' => $request->name,
+            'price' => $request->price,
+            'amount' => $request->amount
+        ]);
+        
+        return redirect()->route('admin.dashboard');
     }
     
 }

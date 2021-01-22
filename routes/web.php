@@ -10,6 +10,7 @@ Route::get('/create', [DashboardController::class, 'CreatePage'])->name('admin.c
 Route::post('/create/make', [DashboardController::class, 'CreateMake'])->name('admin.create.make')->middleware('ProductAuth');
 
 Route::get('/product/update/{id}', [DashboardController::class, 'updateProduct'])->name('admin.product.update');
+Route::put('/product/update/{id}/make', [DashboardController::class, 'updateProductMake'])->name('admin.product.update.make');
 
 Route::patch('/update', [DashboardController::class, 'updateAmount'])->name('admin.amount.update');
 Route::delete('/delete', [DashboardController::class, 'deleteProduct'])->name('admin.delete');
