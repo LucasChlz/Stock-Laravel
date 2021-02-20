@@ -26,9 +26,14 @@
                     <span>Products</span>
                 </div></a>                
 
-                <a href=""><div class="icon-single active">
+                <a href="{{ route('admin.create') }}"><div class="icon-single active">
                     <i class="fas fa-archive"></i>
                     <span>Create Products</span>
+                </div></a>
+
+                <a href="{{ route('token.page') }}"><div class="icon-single">
+                    <i class="fas fa-archive"></i>
+                    <span>Token</span>
                 </div></a>
 
                 <a href="{{ route('logout') }}"><div class="icon-single">

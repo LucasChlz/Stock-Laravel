@@ -29,6 +29,11 @@
                     <span>Create Products</span>
                 </div></a>
 
+                <a href="{{ route('token.page') }}"><div class="icon-single">
+                    <i class="fas fa-archive"></i>
+                    <span>Token</span>
+                </div></a>
+
                 <a href="{{ route('logout') }}"><div class="icon-single">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span>
