@@ -7,6 +7,7 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('styles/admin/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/admin/create.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/admin/token.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/login.css') }}">
     <link rel="stylesheet" href="{{ asset('styles/global.css') }}">
 @endsection
@@ -49,7 +50,13 @@
     <span class="side-btn" id="menuBtn" ><i class="fas fa-bars"></i></span>
     <span id="closeBtn" class="re-side"><i class="fas fa-caret-square-left"></i></span>
     <div class="container-call">
-        <h1>Token</h1>
+        <div class="container-token">
+            <h1>Wanto to generate a api token ?</h1>
+            <a href="">Click Me to generate</a>
+            <div class="token">
+                <input type="text" readonly value="">
+            </div>
+        </div><!--container--token-->
     </div>
 </section><!--container-content-->
 @endsection
