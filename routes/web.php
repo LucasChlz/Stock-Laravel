@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TokenController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'Dashboard'])->name('admin.dashboard');
@@ -31,3 +32,9 @@ Route::prefix('signin')->group(function () {
     Route::get('/', [AuthController::class, 'RegisterPage'])->name('register.page');
     Route::post('/make', [AuthController::class, 'RegisterMake'])->name('register.make')->middleware('AuthUser');
 });
+
+Route::prefix('apiGenerator')->group(function() {
+    Route::get('/', [TokenController::class, 'TokenPage'])->name('token.page');
+});
+
+
